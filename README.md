@@ -46,7 +46,7 @@ See how easy it is to obtain images of a profile:
         counter: 8,
         resolution: 'low',
         token: 'YOUR_TOKEN_HERE',
-        html: '<li class="instagram-thumbnail"><a class="instagram-placeholder" href="{url}" target="_blank"><img src="{image}" alt="{title}"></a></li>',
+        html: '<li class="instagram-thumbnail"><a class="instagram-placeholder" href="{url}" target="_blank"><img src="{image}" alt="{caption}"></a></li>',
         success: function () {
             // Run callback here.
         }
@@ -82,7 +82,7 @@ Here's a quick example:
         counter: 8,
         resolution: 'low',
         token: 'YOUR_TOKEN_HERE',
-        html: '<a href="{url}"><img src="{image}" alt="{title}"></a>',
+        html: '<a href="{url}"><img src="{image}" alt="{caption}"></a>',
         success: function () {
             // Run callback here.
         }
