@@ -1,4 +1,4 @@
-/*! minigram v0.0.1 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
+/*! minigram v0.0.2 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
