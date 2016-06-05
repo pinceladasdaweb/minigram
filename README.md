@@ -66,7 +66,7 @@ The only thing you'll need to get going is a valid access token from Instagram's
     - `thumb` (default) - 150x150
     - `low` - 306x306
     - `standard` - 612x612
-- `token` - A valid oAuth token.
+- `token` - A valid oAuth token. [See the wiki how to get your token](https://github.com/pinceladasdaweb/minigram/wiki)
 - `html` - Custom HTML template to use for images. See [templating](#templating).
 - `success` (function) - A callback function called when images have been added to the page.
 
