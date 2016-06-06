@@ -86,7 +86,7 @@ Here's a quick example:
 </script>
 ```
 
-Notice the `{url}`, `{image}` and `{title}`? The templating option provides several tags for you to use to control where variables are inserted into your HTML markup. Available keywors are:
+Notice the `{url}`, `{image}` and `{caption}`? The templating option provides several tags for you to use to control where variables are inserted into your HTML markup. Available keywors are:
 
 - `{caption}` - Image's caption text. Defaults to empty string if there isn't one.
 - `{url}` - URL to view the image on Instagram's website.
