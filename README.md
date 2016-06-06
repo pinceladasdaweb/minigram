@@ -46,10 +46,7 @@ See how easy it is to obtain images of a profile:
         counter: 8,
         resolution: 'low',
         token: 'YOUR_TOKEN_HERE',
-        html: '<li class="instagram-thumbnail"><a class="instagram-placeholder" href="{url}" target="_blank"><img src="{image}" alt="{caption}"></a></li>',
-        success: function () {
-            // Run callback here.
-        }
+        html: '<li class="instagram-thumbnail"><a class="instagram-placeholder" href="{url}" target="_blank"><img src="{image}" alt="{caption}"></a></li>'
     });
 </script>
 ```
@@ -68,6 +65,8 @@ The only thing you'll need to get going is a valid access token from Instagram's
     - `standard` - 612x612
 - `token` - A valid oAuth token. [See the wiki how to get your token](https://github.com/pinceladasdaweb/minigram/wiki)
 - `html` - Custom HTML template to use for images. See [templating](#templating).
+- `before` (function) - A callback function called before fetching images from Instagram.
+- `after` (function) - A callback function called when Instagram returns valid data.
 - `success` (function) - A callback function called when images have been added to the page.
 
 ## Templating
@@ -82,10 +81,7 @@ Here's a quick example:
         counter: 8,
         resolution: 'low',
         token: 'YOUR_TOKEN_HERE',
-        html: '<a href="{url}"><img src="{image}" alt="{caption}"></a>',
-        success: function () {
-            // Run callback here.
-        }
+        html: '<a href="{url}"><img src="{image}" alt="{caption}"></a>'
     });
 </script>
 ```
