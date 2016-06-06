@@ -26,6 +26,8 @@
         this.resolution = options.resolution || 'thumb';
         this.token      = options.token;
         this.html       = options.html;
+        this.before     = options.before  || undefined;
+        this.after      = options.after   || undefined;
         this.success    = options.success || undefined;
 
         this.fetch();
@@ -39,6 +41,8 @@
             }
 
             var userId = this.token.split('.')[0];
+
+            typeof this.before === 'function' && this.before.call();
 
             this.getPhotos(userId);
         },
@@ -100,6 +104,8 @@
                 status = res.meta.code;
 
                 if (status === 200) {
+                    typeof this.after === 'function' && this.after.call();
+
                     this.each(res.data, function (photo, index) {
                         res = {
                             'caption': photo.caption ? photo.caption.text : '',
