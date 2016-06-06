@@ -82,10 +82,7 @@
         counter<span class="pl-k">:</span> <span class="pl-c1">8</span>,
         resolution<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>low<span class="pl-pds">'</span></span>,
         token<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_TOKEN_HERE<span class="pl-pds">'</span></span>,
-        html<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;li class="instagram-thumbnail"&gt;&lt;a class="instagram-placeholder" href="{url}" target="_blank"&gt;&lt;img src="{image}" alt="{caption}"&gt;&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span>,
-        <span class="pl-en">success</span><span class="pl-k">:</span> <span class="pl-k">function</span> () {
-            <span class="pl-c">// Run callback here.</span>
-        }
+        html<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;li class="instagram-thumbnail"&gt;&lt;a class="instagram-placeholder" href="{url}" target="_blank"&gt;&lt;img src="{image}" alt="{caption}"&gt;&lt;/a&gt;&lt;/li&gt;<span class="pl-pds">'</span></span>
     });
 <span class="pl-k">&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
 
@@ -121,6 +118,10 @@
 <li>
 <code>html</code> - Custom HTML template to use for images. See <a href="#templating">templating</a>.</li>
 <li>
+<code>before</code> (function) - A callback function called before fetching images from Instagram.</li>
+<li>
+<code>after</code> (function) - A callback function called when Instagram returns valid data.</li>
+<li>
 <code>success</code> (function) - A callback function called when images have been added to the page.</li>
 </ul>
 
@@ -136,10 +137,7 @@
         counter<span class="pl-k">:</span> <span class="pl-c1">8</span>,
         resolution<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>low<span class="pl-pds">'</span></span>,
         token<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>YOUR_TOKEN_HERE<span class="pl-pds">'</span></span>,
-        html<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;a href="{url}"&gt;&lt;img src="{image}" alt="{caption}"&gt;&lt;/a&gt;<span class="pl-pds">'</span></span>,
-        <span class="pl-en">success</span><span class="pl-k">:</span> <span class="pl-k">function</span> () {
-            <span class="pl-c">// Run callback here.</span>
-        }
+        html<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;a href="{url}"&gt;&lt;img src="{image}" alt="{caption}"&gt;&lt;/a&gt;<span class="pl-pds">'</span></span>
     });
 <span class="pl-k">&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
 
