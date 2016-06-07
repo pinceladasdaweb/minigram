@@ -1,4 +1,4 @@
-/*! minigram v0.0.3 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
+/*! minigram v0.0.4 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
@@ -29,6 +29,7 @@
         this.html       = options.html;
         this.before     = options.before  || undefined;
         this.after      = options.after   || undefined;
+        this.error      = options.error   || undefined;
         this.success    = options.success || undefined;
 
         this.fetch();
@@ -125,6 +126,7 @@
 
                     typeof this.success === 'function' && this.success.call();
                 } else {
+                    typeof this.error === 'function' && this.error.call(this, res);
                     console.warn('Minigram: ' + res.meta.error_message)
                 }
             }.bind(this));
