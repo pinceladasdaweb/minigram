@@ -67,6 +67,7 @@ The only thing you'll need to get going is a valid access token from Instagram's
 - `html` - Custom HTML template to use for images. See [templating](#templating).
 - `before` (function) - A callback function called before fetching images from Instagram.
 - `after` (function) - A callback function called when Instagram returns valid data.
+- `error` (function) - A callback function called if the API Instagram return error (argument -> json object).
 - `success` (function) - A callback function called when images have been added to the page.
 
 ## Templating
