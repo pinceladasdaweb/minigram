@@ -21,7 +21,7 @@
         }
 
         this.endpoint   = 'https://api.instagram.com/v1/users/';
-        this.container  = target.constructor.name === "Node" ? target : document.querySelector(target);
+        this.container  = target instanceof Node ? target : document.querySelector(target);
         this.counter    = options.counter || 10;
         this.resolution = options.resolution || 'thumb';
         this.token      = options.token;

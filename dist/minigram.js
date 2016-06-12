@@ -1,4 +1,4 @@
-/*! minigram v0.0.4 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
+/*! minigram v0.0.5 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
@@ -22,7 +22,7 @@
         }
 
         this.endpoint   = 'https://api.instagram.com/v1/users/';
-        this.container  = target.constructor.name === "Node" ? target : document.querySelector(target);
+        this.container  = target instanceof Node ? target : document.querySelector(target);
         this.counter    = options.counter || 10;
         this.resolution = options.resolution || 'thumb';
         this.token      = options.token;
