@@ -19,16 +19,25 @@ You can download the latest version or checkout all the releases [here](https://
 
 ## How to use?
 
-Require the package or use the global `minigram` namespace:
+Require the package or use the global `Minigram` namespace:
+
+### AMD
+```html
+<script>
+require(["path/to/minigram.js"], function(Minigram) {
+    // Code here
+});
+</script>
+```
 
 ### commonJS
 ```js
-var minigram = require('minigram');
+var Minigram = require('Minigram');
 ```
 
 ### ES6
 ```js
-import minigram from 'minigram';
+import Minigram from 'Minigram';
 ```
 
 ### Browser
@@ -93,7 +102,7 @@ Notice the `{url}`, `{image}` and `{caption}`? The templating option provides se
 - `{url}` - URL to view the image on Instagram's website.
 - `{type}` - the image's type. Can be `image` or `video`.
 - `{likes}` - Number of likes the image has.
-- `{filter}` - Number of likes the image has.
+- `{filter}` - Filter name used in photo.
 - `{image}` - URL of the image source. The size is inherited from the `resolution` option.
 
 ## Browser Support
