@@ -55,17 +55,26 @@
 <h2>
 <a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use?</h2>
 
-<p>Require the package or use the global <code>minigram</code> namespace:</p>
+<p>Require the package or use the global <code>Minigram</code> namespace:</p>
+
+<h3>
+<a id="amd" class="anchor" href="#amd" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AMD</h3>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1"><span class="pl-c1">require</span>([<span class="pl-s"><span class="pl-pds">"</span>path/to/minigram.js<span class="pl-pds">"</span></span>], <span class="pl-k">function</span>(<span class="pl-smi">Minigram</span>) {</span>
+<span class="pl-s1">    <span class="pl-c">// Code here</span></span>
+<span class="pl-s1">});</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h3>
 <a id="commonjs" class="anchor" href="#commonjs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>commonJS</h3>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> minigram <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>minigram<span class="pl-pds">'</span></span>);</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> Minigram <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>Minigram<span class="pl-pds">'</span></span>);</pre></div>
 
 <h3>
 <a id="es6" class="anchor" href="#es6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ES6</h3>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">minigram</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>minigram<span class="pl-pds">'</span></span>;</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">Minigram</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>Minigram<span class="pl-pds">'</span></span>;</pre></div>
 
 <h3>
 <a id="browser" class="anchor" href="#browser" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Browser</h3>
@@ -155,7 +164,7 @@
 <li>
 <code>{likes}</code> - Number of likes the image has.</li>
 <li>
-<code>{filter}</code> - Number of likes the image has.</li>
+<code>{filter}</code> - Filter name used in photo.</li>
 <li>
 <code>{image}</code> - URL of the image source. The size is inherited from the <code>resolution</code> option.</li>
 </ul>
