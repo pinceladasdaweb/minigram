@@ -1,4 +1,4 @@
-/*! minigram v0.0.5 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
+/*! minigram v0.1.0 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
@@ -31,6 +31,11 @@
         this.after      = options.after   || undefined;
         this.error      = options.error   || undefined;
         this.success    = options.success || undefined;
+
+        if (!this.isHtml(this.html)) {
+            console.warn('Minigram: Please check your HTML template because it is not valid.')
+            return;
+        }
 
         this.fetch();
     };
@@ -87,6 +92,19 @@
             for (i = 0, len = collection.length; i < len; i += 1) {
                 iterator(collection[i], i, collection);
             }
+        },
+        isHtml: function (str) {
+            var htmlTags = ["a","abbr","address","area","article","aside","audio","b","base","bdi","bdo","blockquote","body","br","button","canvas","caption","cite","code","col","colgroup","data","datalist","dd","del","details","dfn","dialog","div","dl","dt","em","embed","fieldset","figcaption","figure","footer","form","h1","h2","h3","h4","h5","h6","head","header","hr","html","i","iframe","img","input","ins","kbd","keygen","label","legend","li","link","main","map","mark","math","menu","menuitem","meta","meter","nav","noscript","object","ol","optgroup","option","output","p","param","picture","pre","progress","q","rb","rp","rt","rtc","ruby","s","samp","script","section","select","small","source","span","strong","style","sub","summary","sup","svg","table","tbody","td","template","textarea","tfoot","th","thead","time","title","tr","track","u","ul","var","video","wbr"];
+
+            if (/\s?<!doctype html>|(<html\b[^>]*>|<body\b[^>]*>|<x-[^>]+>)+/i.test(str)) {
+                return true;
+            }
+
+            var re = new RegExp(htmlTags.map(function (el) {
+                    return '<' + el + '\\b[^>]*>';
+                }).join('|'), 'i');
+
+            return re.test(str);
         },
         getObjectProperty: function (object, property) {
             var key, val;
