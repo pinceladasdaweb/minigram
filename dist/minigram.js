@@ -1,4 +1,4 @@
-/*! minigram v0.1.0 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
+/*! minigram v0.1.1 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/minigram */
 (function (root, factory) {
     "use strict";
     if (typeof define === 'function' && define.amd) {
@@ -31,6 +31,10 @@
         this.after      = options.after   || undefined;
         this.error      = options.error   || undefined;
         this.success    = options.success || undefined;
+
+        if (this.container === null) {
+            return;
+        }
 
         if (!this.isHtml(this.html)) {
             console.warn('Minigram: Please check your HTML template because it is not valid.')
