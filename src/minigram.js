@@ -31,6 +31,10 @@
         this.error      = options.error   || undefined;
         this.success    = options.success || undefined;
 
+        if (this.container === null) {
+            return;
+        }
+
         if (!this.isHtml(this.html)) {
             console.warn('Minigram: Please check your HTML template because it is not valid.')
             return;
