@@ -1,7 +1,7 @@
 {
     "name": "minigram",
     "description": "A simple plugin to display your latest Instagram photos with Vanilla JS",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Pedro Rogerio",
     "license": "MIT",
     "copyright": "2016",
